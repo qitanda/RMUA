@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/aiden/mini_perception/lib/libimgwarp.a CMakeFiles/imgwarp.dir/imgwarp/imgwarp.cpp.o
+/usr/bin/ranlib /home/aiden/mini_perception/lib/libimgwarp.a

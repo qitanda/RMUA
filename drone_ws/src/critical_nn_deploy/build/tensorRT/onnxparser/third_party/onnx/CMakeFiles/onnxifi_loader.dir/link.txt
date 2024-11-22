@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/aiden/mini_perception/lib/libonnxifi_loader.a CMakeFiles/onnxifi_loader.dir/onnx/onnxifi_loader.c.o
+/usr/bin/ranlib /home/aiden/mini_perception/lib/libonnxifi_loader.a

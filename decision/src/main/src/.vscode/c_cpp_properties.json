@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/ly/decision/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/ly/IntelligentUAVChampionshipBase-RMUA2023/basic_dev/devel/include/**",
+        "/home/zj_ws/decision/src/airsim_ros/include/**",
+        "/home/ly/IntelligentUAVChampionshipBase-RMUA2023/basic_dev/src/basic_dev/include/**",
+        "/home/ly/decision/src/main/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

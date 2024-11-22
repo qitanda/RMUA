@@ -1,0 +1,51 @@
+<launch>
+
+  <node pkg="px4ctrl" type="px4ctrl_node" name="px4ctrl_node" output="screen">
+        <param name="airsim_flag"  value="true"/>
+        <param name="gazebo_flag"  value="false"/>
+
+        <!-- <remap from="odom"         to="/airsim_node/drone_1/odom_local_ned"/>
+        <remap from="state"        to="/mavros/state"/>
+        <remap from="imu"          to="/airsim_node/drone_1/imu/imu"/>
+        <remap from="rc_in"        to="/mavros/rc/in"/>
+        <remap from="battery"      to="/mavros/battery"/>
+        <remap from="pos_cmd"      to="/position_cmd"/>
+
+        <remap from="reboot"       to="/mavros/cmd/command"/>
+        
+        <remap from="px4ctrl"      to="/mavros/setpoint_raw/attitude"/> -->
+
+        <!-- <remap from="odom"         to="/mavros/local_position/odom"/> -->
+        <remap from="odom"         to="/airsim_bridge/drone_1/debug/odom"/>
+        <!-- <remap from="odom"         to="/vio/odom"/> -->
+        <remap from="state"        to="/mavros/state"/>
+        <remap from="imu"          to="/airsim_node/drone_1/imu/imu"/>
+        <remap from="rc_in"        to="/mavros/rc/in"/>
+        <remap from="battery"      to="/mavros/battery"/>
+        <remap from="pos_cmd"      to="/position_cmd"/>
+        <remap from="px4ctrl"      to="/mavros/setpoint_raw/attitude"/>
+        
+        <rosparam command="load" file="$(find px4ctrl)/config/param.yaml"/>
+    </node>
+
+    <node pkg="minimum_snap" type="planning_node" name="planning_node" output="screen">
+        <param name="order"        value="3"/>
+        <param name="v_max"        value="3"/>
+        <param name="a_max"        value="2"/>
+
+        <remap from="waypoints"    to="/waypoint_generator/waypoints"/>
+    
+        <remap from="path"         to="/minimum_snap/path"/>
+        <remap from="pos_cmd"      to="/position_cmd"/>
+        <remap from="yaw_ctrl"     to="/yaw/ctrl"/>
+    </node>
+
+    <!-- <node pkg="waypoint_generator" name="waypoint_generator" type="waypoint_generator" output="screen">
+        <remap from="~goal" to="/goal"/>
+        <param name="waypoint_type" value="manual"/>
+    </node> -->
+    
+    <node name="planning" pkg="rviz" type="rviz" output="screen" args="-d $(find minimum_snap)/rviz.rviz"/>
+
+    <node name="odom_debug" pkg="airsim_bridge" type="odom_debug" output="screen"/>
+</launch>

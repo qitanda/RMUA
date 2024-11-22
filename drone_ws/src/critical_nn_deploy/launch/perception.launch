@@ -1,0 +1,5 @@
+<launch>
+    <node name="perception_node" pkg="critical_nn_deploy" type="perception_node" output="screen"> 
+        <rosparam command="load" file="$(find critical_nn_deploy)/config/perception.yaml"/>
+    </node>
+</launch>

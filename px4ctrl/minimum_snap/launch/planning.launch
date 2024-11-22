@@ -1,0 +1,19 @@
+<launch>
+    <node pkg="minimum_snap" type="planning_node" name="planning_node" output="screen">
+        <param name="order"        value="3"/>
+        <param name="v_max"        value="4.0"/>
+        <param name="a_max"        value="1.0"/>
+
+        <remap from="waypoints"    to="/waypoint_generator/waypoints"/>
+        <remap from="path"         to="/minimum_snap/path"/>
+        <remap from="pos_cmd"      to="/position_cmd"/>
+        <remap from="yaw_ctrl"     to="/yaw/ctrl"/>
+    </node>
+
+    <!-- <node pkg="waypoint_generator" name="waypoint_generator" type="waypoint_generator" output="screen">
+        <remap from="~goal" to="/goal"/>
+        <param name="waypoint_type" value="manual"/>
+    </node> -->
+    
+    <node name="planning" pkg="rviz" type="rviz" output="screen" args="-d $(find minimum_snap)/rviz.rviz"/>
+</launch>

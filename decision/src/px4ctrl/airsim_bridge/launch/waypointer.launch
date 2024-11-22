@@ -1,0 +1,7 @@
+<launch>
+  <!-- 设置节点的私有参数 -->
+  <node name="waypoint_node" pkg="airsim_bridge" type="waypointer" output="screen"/>
+    <param name="waypoint_num"  value="9"/>
+    <param name="path_num"  value="2"/>
+  <!-- 启动节点 -->
+</launch>

@@ -1,0 +1,1 @@
+  -L"/home/aiden/Downloads/cudnn-linux-x86_64-8.4.0.27_cuda11.6-archive/lib"  -L"/usr/local/cuda-11.6/targets/x86_64-linux/lib/stubs"  -L"/usr/local/cuda-11.6/targets/x86_64-linux/lib"   /home/aiden/mini_perception/lib/libonnx_proto.a -lpthread -lcudadevrt -lcudart_static -lrt -ldl 

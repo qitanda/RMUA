@@ -1,0 +1,16 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/ly/decision/devel/lib/python3/dist-packages",
+        "/home/ly/IntelligentUAVChampionshipBase-RMUA2023/basic_dev/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/ly/decision/devel/lib/python3/dist-packages",
+        "/home/ly/IntelligentUAVChampionshipBase-RMUA2023/basic_dev/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "files.associations": {
+        "ostream": "cpp",
+        "functional": "cpp"
+    }
+}

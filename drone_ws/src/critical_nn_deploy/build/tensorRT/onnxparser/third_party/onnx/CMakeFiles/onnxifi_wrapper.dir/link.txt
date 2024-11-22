@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -O3 -DNDEBUG -shared  -o /home/aiden/mini_perception/lib/libonnxifi.so CMakeFiles/onnxifi_wrapper.dir/onnx/onnxifi_wrapper.c.o   -L/home/aiden/Downloads/cudnn-linux-x86_64-8.4.0.27_cuda11.6-archive/lib  -Wl,-rpath,/home/aiden/Downloads/cudnn-linux-x86_64-8.4.0.27_cuda11.6-archive/lib: /home/aiden/mini_perception/lib/libonnxifi_loader.a -ldl 

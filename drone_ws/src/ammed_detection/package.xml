@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ammed_detection</name>
+  <version>0.0.0</version>
+  <description>The ammed_detection package</description>
+
+
+  <maintainer email="lijun@todo.todo">lijun</maintainer>
+
+
+  <license>TODO</license>
+
+
+  <!--   <doc_depend>doxygen</doc_depend> -->
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>pcl_conversions</build_depend>
+  <build_depend>pcl_ros</build_depend>
+  <build_depend>eigen_conversions</build_depend>
+  <build_depend>image_transport</build_depend>
+  <build_depend>roscppstd_msgs</build_depend>
+  <build_export_depend>cv_bridge</build_export_depend>
+  <build_export_depend>eigen_conversions</build_export_depend>
+  <build_export_depend>image_transport</build_export_depend>
+  <build_export_depend>roscppstd_msgs</build_export_depend>
+  <build_export_depend>pcl_ros</build_export_depend>
+  <build_export_depend>pcl_conversions</build_export_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>eigen_conversions</exec_depend>
+  <exec_depend>image_transport</exec_depend>
+  <exec_depend>roscppstd_msgs</exec_depend>
+  <exec_depend>pcl_ros</exec_depend>
+  <exec_depend>pcl_conversions</exec_depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>

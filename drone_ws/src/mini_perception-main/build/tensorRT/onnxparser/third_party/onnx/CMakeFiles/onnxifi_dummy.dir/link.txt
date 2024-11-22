@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libonnxifi_dummy.so -o ../../../../../lib/libonnxifi_dummy.so CMakeFiles/onnxifi_dummy.dir/onnx/onnxifi_dummy.c.o   -L/home/rmuc3/Downloads/cudnn-linux-x86_64-8.4.0.27_cuda11.6-archive/lib  -Wl,-rpath,/home/rmuc3/Downloads/cudnn-linux-x86_64-8.4.0.27_cuda11.6-archive/lib: -ldl 

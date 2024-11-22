@@ -1,0 +1,37 @@
+mass: 1.2  # kg 
+gra:  -9.8
+freq: 80
+
+bodyrate_flag: false
+rc_hover_gain: 1.0
+
+gain: 
+  # Cascade PID controller. Recommend to read the code.
+  Kp0: 4
+  Kp1: 4
+  Kp2: 6
+  Kv0: 1.5
+  Kv1: 1.5
+  Kv2: 4
+  # Only used in rate control mode.
+  KAngR: 2.0
+  KAngP: 2.0
+  KAngY: 2.0
+
+rotor_drag:  
+  x: 0.0  # The reduced acceleration on each axis caused by rotor drag. Unit:(m*s^-2)/(m*s^-1).
+  y: 0.0  # Same as above
+  z: 0.0  # Same as above
+  k_thrust_horz: 0.0 # Set to 0 recommended... --
+
+thrust_model:                   # The model that maps thrust signal u(0~1) to real thrust force F(Unit:N): F=K1*Voltage^K2*(K3*u^2+(1-K3)*u). 
+  estimate: true
+  print_value: true            # display the value of “thr_scale_compensate” or “hover_percentage” during thrust model estimating.
+  accurate_thrust_model: false  # This can always enabled if don't require accurate control performance :-)
+  # accurate thrust mapping parameters
+  K1: 0.7583 # Needs precise calibration!
+  K2: 1.6942 # Needs precise calibration!
+  K3: 0.6786 # Needs precise calibration! K3 equals THR_MDL_FAC in https://docs.px4.io/master/en/config_mc/pid_tuning_guide_multicopter.html.
+  # approximate thrust mapping parameters
+  hover_percentage: 0.6 # Thrust percentage in Stabilize/Arco mode (0.7 for simulator)
+  # hover_percentage: 0.7 # Thrust percentage in Stabilize/Arco mode (0.7 for simulator)

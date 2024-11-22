@@ -1,0 +1,8 @@
+<launch>
+    <node pkg="waypoint_generator" name="special_traj_node" type="special_traj_node" output="screen">
+        <param name="height"           value="1.0"/>
+        <param name="radius"           value="0.8"/>
+        <param name="scale"            value="1.0"/>
+        <param name="eight_scale"      value="0.5"/>
+    </node>
+</launch>
